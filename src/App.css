@@ -1,3 +1,8 @@
+@import '~antd/dist/antd.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
@@ -27,6 +32,10 @@
 .App-link {
   color: #61dafb;
 }
+
+/* .ant-col.ant-form-item-control {
+  flex: 0 !important;
+} */
 
 @keyframes App-logo-spin {
   from {
