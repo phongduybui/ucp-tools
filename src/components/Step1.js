@@ -98,7 +98,7 @@ const Step1 = ({ onNextStep, onPrevStep }) => {
 
   return (
     <>
-      <Form form={form} className="py-4" onFinish={onFinish}>
+      <Form form={form} className="my-8" onFinish={onFinish}>
         <Form.Item
           label="Number of simple Use Cases"
           name="simpleUC"

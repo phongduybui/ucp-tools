@@ -52,7 +52,7 @@ const Step4 = ({ onNextStep, onPrevStep }) => {
     },
     {
       key: '2',
-      name: 'e3',
+      name: 'E3',
       description: 'Object-oriented experience of team',
       weight: 1,
       form: (
@@ -73,7 +73,7 @@ const Step4 = ({ onNextStep, onPrevStep }) => {
     },
     {
       key: '2',
-      name: 'e4',
+      name: 'E4',
       description: 'Lead analyst capability',
       weight: 0.5,
       form: (
@@ -94,7 +94,7 @@ const Step4 = ({ onNextStep, onPrevStep }) => {
     },
     {
       key: '2',
-      name: 'e5',
+      name: 'E5',
       description: 'Motivation of the team',
       weight: 1,
       form: (
@@ -115,7 +115,7 @@ const Step4 = ({ onNextStep, onPrevStep }) => {
     },
     {
       key: '2',
-      name: 'e6',
+      name: 'E6',
       description: 'Stability of requirements',
       weight: 2,
       form: (
@@ -136,7 +136,7 @@ const Step4 = ({ onNextStep, onPrevStep }) => {
     },
     {
       key: '2',
-      name: 'e7',
+      name: 'E7',
       description: 'Part-time staff',
       weight: -1,
       form: (
@@ -157,7 +157,7 @@ const Step4 = ({ onNextStep, onPrevStep }) => {
     },
     {
       key: '2',
-      name: 'e8',
+      name: 'E8',
       description: 'Difficult programming language',
       weight: -1,
       form: (
@@ -256,7 +256,7 @@ const Step4 = ({ onNextStep, onPrevStep }) => {
 
   return (
     <>
-      <Form form={form} onFinish={onFinish} className="my-6">
+      <Form form={form} onFinish={onFinish} className="my-8">
         <Table
           key="key"
           dataSource={dataSource}
@@ -265,7 +265,7 @@ const Step4 = ({ onNextStep, onPrevStep }) => {
         />
       </Form>
 
-      <div className="bg-slate-500 text-white">
+      <div className="bg-slate-500 text-white p-2 text-lg">
         <div>{`EF Total: ${ucpData?.ecf?.efTotal || ''}`}</div>
         <div>{`ECF = 1.4 +(-0.03 x EF)`}</div>
         <strong>{`ECF = ${ucpData?.ecf?.total?.toFixed(2) || ''}`}</strong>

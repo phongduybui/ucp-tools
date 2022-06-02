@@ -12,6 +12,23 @@
   pointer-events: none;
 }
 
+.ant-steps-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ant-steps-item-title {
+  font-size: 17px;
+ font-weight: 600;
+}
+
+.ant-steps-item-description {
+  font-size: 12px;
+  max-width: unset !important;
+
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

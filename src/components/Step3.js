@@ -343,19 +343,6 @@ const Step3 = ({ onNextStep, onPrevStep }) => {
       dataIndex: 'form',
       key: 'form',
     },
-    // {
-    //   title: 'Result',
-    //   dataIndex: 'result',
-    //   render: (result, record, index) => (
-    //     <Tag
-    //       color={index < 3 ? '#108ee9' : 'green'}
-    //       className={index === 3 && 'text-xl'}
-    //     >
-    //       {result}
-    //     </Tag>
-    //   ),
-    //   key: 'result',
-    // },
   ];
 
   const calculateTotal = (values) => {
@@ -378,7 +365,7 @@ const Step3 = ({ onNextStep, onPrevStep }) => {
 
   return (
     <>
-      <Form form={form} onFinish={onFinish} className="my-6">
+      <Form form={form} onFinish={onFinish} className="my-8">
         <Table
           key="key"
           dataSource={dataSource}
@@ -387,7 +374,7 @@ const Step3 = ({ onNextStep, onPrevStep }) => {
         />
       </Form>
 
-      <div className="bg-slate-500 text-white">
+      <div className="bg-slate-500 text-white p-2 text-lg">
         <div>{`TF Total: ${ucpData?.tcf?.tfTotal || ''}`}</div>
         <div>{`TCF = 0.6 +(TF/100)`}</div>
         <strong>{`TCF = ${ucpData?.tcf?.total?.toFixed(2) || ''}`}</strong>

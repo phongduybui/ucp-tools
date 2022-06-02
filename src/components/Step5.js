@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setData } from '../redux/ucpSlice';
+import Export from './Export';
 
 const Step5 = () => {
   const ucpData = useSelector((state) => state.ucp.data);
@@ -25,18 +26,20 @@ const Step5 = () => {
         <p>UCP = (UUCW + UAW) x TCF x ECF</p>
       </div>
 
-      <div className="bg-green-300  p-3 mt-6 text-lg">
-        <p>{`UCP = (${uucw?.total?.toFixed(2) || 0} + ${
-          uaw?.total?.toFixed(2) || 0
-        }) x ${tcf?.total?.toFixed(2) || 0} x ${
-          ecf?.total?.toFixed(2) || 0
-        } `}</p>
-        {!!finalValue && (
+      {!!finalValue && (
+        <div className="bg-orange-300  p-3 mt-6 text-lg">
+          <p>{`UCP = (${uucw?.total?.toFixed(2) || 0} + ${
+            uaw?.total?.toFixed(2) || 0
+          }) x ${tcf?.total?.toFixed(2) || 0} x ${
+            ecf?.total?.toFixed(2) || 0
+          } `}</p>
           <p className="mt-4">
-            Your project contains <strong>{finalValue}</strong> Use Case Points.
+            Your project contains <strong>{finalValue?.toFixed(2)}</strong> Use
+            Case Points.
           </p>
-        )}
-      </div>
+        </div>
+      )}
+      <Export />
     </div>
   );
 };
